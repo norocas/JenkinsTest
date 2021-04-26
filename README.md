@@ -1,2 +1,2 @@
 # JenkinsTest
-![Python package](https://github.com/norocas/JenkinsTest/actions/workflows/build.yml)
+![build](https://github.com/norocas/JenkinsTest/build/workflows/build.yml)
