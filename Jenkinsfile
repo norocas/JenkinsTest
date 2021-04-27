@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 withEnv(["HOME=${env.WORKSPACE}"]) {
-                    sh "pip install pytest --user"
+                    sh "pip3 install pytest --user"
                     sh 'pytest pytest/'
                 }
             }
