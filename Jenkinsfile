@@ -5,7 +5,7 @@ pipeline {
             steps {
                 withEnv(["HOME=${env.WORKSPACE}"]) {
                     sh "pip3 install pytest --user"
-                    sh 'pytest pytest/'
+                    sh ' python3 -m pytest pytest/test_add.py'
                 }
             }
         }
