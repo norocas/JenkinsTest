@@ -1,9 +1,10 @@
 pipeline {
-    agent { docker { image 'python:3.5.1' } }
+    agent { docker { image 'python:3.7' } }
     stages {
         stage('build') {
             steps {
-                sh 'pip3 install pytest'
+                withEnv(["HOME=${env.WORKSPACE}"]) {
+                sh "pip install pytest --user"
                 sh 'pytest pytest/'
             }
         }
