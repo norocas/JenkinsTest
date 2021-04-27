@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'pip3 install pytest'
+                sh 'pip install pytest'
                 sh 'pytest pytest/'
             }
         }
